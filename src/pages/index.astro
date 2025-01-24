@@ -1,11 +1,42 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import { Icon } from 'astro-icon/components';
+import Button from '../components/Button.astro';
 ---
 
-<Layout>
-	<Welcome />
+<Layout name="Home">
+	<div class="p-2 border border-amber-500 mb-5 flex gap-3 items-center dark:hidden">
+		<Icon name="info" />
+		<p>this website is viewed best in <b>dark mode</b>. click the moon in the top right to switch to dark mode.</p>
+	</div>
+
+	<h1 class="text-2xl font-bold">hey, i'm valentine.</h1>
+
+	<p class="mt-4">i'm a trans girl that makes nerdy shit on the internet. i write code every so often, sometimes make some motion graphics, and whatever my special interest is this month</p>
+	<p class="mt-4">i am a minor, so please don't be creepy in my dms thanks</p>
+	<p class="mt-4">as i said earlier, i'm transgender. i go by she/her or they/them pronouns, and i am into WOMEN!!!!!! (men please dont hmu with the intent of a relationship)</p>
+	<p class="mt-4">if you want to see more of my stuff online, i usually share them on my social media which you can see all of my platforms <a href="/links" class="text-blue-600 dark:text-blue-300 hover:underline">here</a>.</p>
+
+	<hr class="border-black dark:border-white my-3" />
+
+	<p class="text-center font-bold mb-2">some cool people</p>
+	<p class="text-center text-xs">i have no friends to put here ☹️</p>
+	<div class="buttons">
+		<Button url="/"  imageUrl="/buttons/valbuildr.png" alt="valbuildr (hey thats me!!)"/>
+	</div>
+
+	<hr class="border-black dark:border-white my-3" />
+
+	<p class="text-center font-bold mb-2">some more cool buttons</p>
+	<div class="buttons">
+		<Button url="https://wetdry.world/" imageUrl="/buttons/wetdryworld.png" alt="wetdry.world"/>
+		<Button url="https://www.ifixit.com/Right-to-Repair" imageUrl="/buttons/right-to-repair.jpg" alt="I SUPPORT RIGHT TO REPAIR"/>
+	</div>
 </Layout>
+
+<style>
+	[data-icon="info"] {
+		font-size: 1rem;
+		line-height: calc(1.5 / 1);
+	}
+</style>

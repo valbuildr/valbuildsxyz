@@ -1,0 +1,15 @@
+---
+import { twMerge } from "tailwind-merge";
+
+interface Props {
+    href: string;
+    target?: string;
+    classOverride?: string;
+}
+
+const { href, target = "_blank", classOverride = "" } = Astro.props;
+---
+
+<a {href} class={twMerge("p-2 flex gap-3 items-center border border-[#5B1AAA] dark:border-[#B521CC] hover:bg-[#5B1AAA] hover:dark:bg-[#B521CC] hover:text-white", classOverride)} {target}>
+    <slot />
+</a>
