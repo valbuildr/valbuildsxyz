@@ -14,15 +14,14 @@ import DiscordSolid from '../components/logos/DiscordSolid.svelte';
 import GithubSolid from '../components/logos/GithubSolid.svelte';
 
 const links = {
-    youtube: "",
-    discord: "",
-    bluesky: "",
-    fedi: "",
-    github: "",
-    tiktok: "",
-    steam: "",
-    pronounsPage: "",
-    twitch: ""
+    youtube: "https://www.youtube.com/@valbuildr",
+    discord: "https://discord.gg/UKVMvUG2h9",
+    bluesky: "https://bsky.app/profile/valbuilds.xyz",
+    fedi: "https://wetdry.world/@valbuildr",
+    github: "https://github.com/valbuildr",
+    tiktok: "https://www.tiktok.com/@valbuildr",
+    steam: "https://steamcommunity.com/id/valbuilds/",
+    pronounsPage: "https://en.pronouns.page/@valbuilded"
 }
 ---
 
@@ -75,10 +74,6 @@ const links = {
         <SocialMediaLink href={links.pronounsPage}>
             <PronounsPageSolid />
             <p>Pronouns.page (english only)</p>
-        </SocialMediaLink>
-        <SocialMediaLink href={links.twitch}>
-            <TwitchSolid />
-            <p>Twitch (i'll stream sometime)</p>
         </SocialMediaLink>
     </div>
 </Layout>
