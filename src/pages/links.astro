@@ -1,86 +1,97 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import { Icon } from 'astro-icon/components';
-import SocialMediaLink from '../components/SocialMediaLink.astro';
+import Layout from "../layouts/Layout.astro";
+import { Icon } from "astro-icon/components";
+import SocialMediaLink from "../components/SocialMediaLink.astro";
 
-import BlueskySolid from '../components/logos/BlueskySolid.svelte';
-import MastodonSolid from '../components/logos/MastodonSolid.svelte';
-import PronounsPageSolid from '../components/logos/PronounsPageSolid.svelte';
-import SteamSolid from '../components/logos/SteamSolid.svelte';
-import TikTokSolid from '../components/logos/TikTokSolid.svelte';
-import TwitchSolid from '../components/logos/TwitchSolid.svelte';
-import YoutubeSolid from '../components/logos/YoutubeSolid.svelte';
-import DiscordSolid from '../components/logos/DiscordSolid.svelte';
-import GithubSolid from '../components/logos/GithubSolid.svelte';
+import BlueskySolid from "../components/logos/BlueskySolid.svelte";
+import MastodonSolid from "../components/logos/MastodonSolid.svelte";
+import PronounsPageSolid from "../components/logos/PronounsPageSolid.svelte";
+import SteamSolid from "../components/logos/SteamSolid.svelte";
+import TikTokSolid from "../components/logos/TikTokSolid.svelte";
+import TwitchSolid from "../components/logos/TwitchSolid.svelte";
+import YoutubeSolid from "../components/logos/YoutubeSolid.svelte";
+import DiscordSolid from "../components/logos/DiscordSolid.svelte";
+import GithubSolid from "../components/logos/GithubSolid.svelte";
 
 const links = {
-    youtube: "https://www.youtube.com/@valbuildr",
-    discord: "https://discord.gg/UKVMvUG2h9",
-    bluesky: "https://bsky.app/profile/valbuilds.xyz",
-    fedi: "https://wetdry.world/@valbuildr",
-    github: "https://github.com/valbuildr",
-    tiktok: "https://www.tiktok.com/@valbuildr",
-    steam: "https://steamcommunity.com/id/valbuilds/",
-    pronounsPage: "https://en.pronouns.page/@valbuilded"
-}
+  youtube: "https://www.youtube.com/@valbuildr",
+  discord: "https://discord.gg/UKVMvUG2h9",
+  bluesky: "https://bsky.app/profile/valbuilds.xyz",
+  fedi: "https://wetdry.world/@valbuildr",
+  github: "https://github.com/valbuildr",
+  tiktok: "https://www.tiktok.com/@valbuildr",
+  steam: "https://steamcommunity.com/id/valbuilds/",
+  pronounsPage: "https://en.pronouns.page/@valbuilded",
+};
 ---
 
 <Layout name="Links">
-    <div class="flex gap-3 items-center">
-        <img
-            class="sm:w-24 sm:h-24 w-20 h-20 mb-3 rounded-full shadow-lg"
-            src="/pfp.png"
-            alt="Profile"
-        />
-        <div class="flex flex-col gap-2">
-            <h3 class="sm:text-3xl text-2xl font-bold">Valentine</h3>
-            <h5 class="sm:text-xl text-md text-gray-600 dark:text-gray-400">valbuildr • <a href={links.pronounsPage} target="_blank" class="hover:underline">she/they</a></h5>
-        </div>
+  <div class="flex gap-3 items-center">
+    <img
+      class="sm:w-24 sm:h-24 w-20 h-20 mb-3 rounded-full shadow-lg"
+      src="/pfp.png"
+      alt="Profile"
+    />
+    <div class="flex flex-col gap-2">
+      <h3 class="sm:text-3xl text-2xl font-bold">Valentine</h3>
+      <h5 class="sm:text-xl text-md text-gray-600 dark:text-gray-400">
+        valbuildr • <a
+          href={links.pronounsPage}
+          target="_blank"
+          class="hover:underline">she/they</a>
+      </h5>
     </div>
+  </div>
 
-    <p>a person that makes things on the internet sometimes.<br /><br />profile picture by <a class="hover:underline" href="https://picrew.me/en/image_maker/1904634">✦絢瀬 on picrew</a></p>
+  <p>
+    an asexual transfem lesbian that makes nerdy stuff online<br /><br />profile
+    picture: <a
+      class="hover:underline"
+      href="https://picrew.me/en/image_maker/2321144"
+      >https://picrew.me/en/image_maker/2321144</a>
+  </p>
 
-    <hr class="border-black dark:border-white my-3" />
+  <hr class="border-black dark:border-white my-3" />
 
-    <div class="flex flex-col md:grid md:grid-cols-2 lg:grid-cols-3 gap-2">
-        <SocialMediaLink href={links.youtube}>
-            <YoutubeSolid />
-            <p>Youtube</p>
-        </SocialMediaLink>
-        <SocialMediaLink href={links.discord}>
-            <DiscordSolid />
-            <p>Discord</p>
-        </SocialMediaLink>
-        <SocialMediaLink href={links.bluesky}>
-            <BlueskySolid />
-            <p>Bluesky</p>
-        </SocialMediaLink>
-        <SocialMediaLink href={links.fedi}>
-            <MastodonSolid />
-            <p>Mastodon/Fedi</p>
-        </SocialMediaLink>
-        <SocialMediaLink href={links.github}>
-            <GithubSolid />
-            <p>Github</p>
-        </SocialMediaLink>
-        <SocialMediaLink href={links.tiktok}>
-            <TikTokSolid />
-            <p>TikTok</p>
-        </SocialMediaLink>
-        <SocialMediaLink href={links.steam}>
-            <SteamSolid />
-            <p>Steam</p>
-        </SocialMediaLink>
-        <SocialMediaLink href={links.pronounsPage}>
-            <PronounsPageSolid />
-            <p>Pronouns.page (english only)</p>
-        </SocialMediaLink>
-    </div>
+  <div class="flex flex-col md:grid md:grid-cols-2 lg:grid-cols-3 gap-2">
+    <SocialMediaLink href={links.youtube}>
+      <YoutubeSolid />
+      <p>Youtube</p>
+    </SocialMediaLink>
+    <SocialMediaLink href={links.discord}>
+      <DiscordSolid />
+      <p>Discord</p>
+    </SocialMediaLink>
+    <SocialMediaLink href={links.bluesky}>
+      <BlueskySolid />
+      <p>Bluesky</p>
+    </SocialMediaLink>
+    <SocialMediaLink href={links.fedi}>
+      <MastodonSolid />
+      <p>Mastodon/Fedi</p>
+    </SocialMediaLink>
+    <SocialMediaLink href={links.github}>
+      <GithubSolid />
+      <p>Github</p>
+    </SocialMediaLink>
+    <SocialMediaLink href={links.tiktok}>
+      <TikTokSolid />
+      <p>TikTok</p>
+    </SocialMediaLink>
+    <SocialMediaLink href={links.steam}>
+      <SteamSolid />
+      <p>Steam</p>
+    </SocialMediaLink>
+    <SocialMediaLink href={links.pronounsPage}>
+      <PronounsPageSolid />
+      <p>Pronouns.page (english only)</p>
+    </SocialMediaLink>
+  </div>
 </Layout>
 
 <style>
-    [data-icon] {
-        font-size: 1rem;
-        line-height: calc(1.5 / 1);
-    }
+  [data-icon] {
+    font-size: 1rem;
+    line-height: calc(1.5 / 1);
+  }
 </style>
