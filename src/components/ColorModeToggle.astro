@@ -1,0 +1,50 @@
+---
+import { twMerge } from "tailwind-merge";
+
+interface Props {
+  defaultClass?: string;
+  ariaLabel?: string;
+}
+
+const { defaultClass, ariaLabel = "Toggle color mode" } = Astro.props;
+---
+
+<head>
+  <script>
+    if ("color-theme" in localStorage) {
+      localStorage.getItem("color-theme") === "dark"
+        ? window.document.documentElement.classList.add("dark")
+        : window.document.documentElement.classList.remove("dark");
+    } else {
+      if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+        window.document.documentElement.classList.add("dark");
+      }
+    }
+  </script>
+</head>
+
+<button
+  aria-label={ariaLabel}
+  type="button"
+  id="color-mode-toggle"
+  class={twMerge(
+    defaultClass,
+    "hover:underline text-royal-purple-800 dark:text-royal-purple-200"
+  )}
+>
+  <span class="hidden dark:block">☀️</span>
+  <span class="dark:hidden block">🌕</span>
+</button>
+
+<script is:inline>
+  const buttons = document.querySelectorAll("#color-mode-toggle");
+
+  buttons.forEach((button) => {
+    button.addEventListener("click", (ev) => {
+      const target = ev.target;
+      const isDark =
+        target.ownerDocument.documentElement.classList.toggle("dark");
+      localStorage.setItem("color-theme", isDark ? "dark" : "light");
+    });
+  });
+</script>
