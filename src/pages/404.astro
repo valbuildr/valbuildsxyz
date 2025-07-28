@@ -1,8 +1,17 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import MainLayout from "../layouts/MainLayout.astro";
 ---
 
-<Layout name="404 - Page not found">
-    <h1 class="text-2xl font-bold text-center">404 • Not found</h1>
-    <h2 class="text-xl text-center"><a href="/" class="text-blue-600 dark:text-blue-300 hover:underline">Go to homepage</a></h2>
-</Layout>
+<MainLayout>
+  <h1 class="text-3xl font-semibold text-center mb-1">
+    <a href="/">⛓️‍💥</a> That page doesn't seem to exist.
+  </h1>
+  <h2 class="text-2xl font-medium text-center mb-4">
+    You should probably go <a
+      href="/"
+      class="hover:underline text-royal-purple-800 dark:text-royal-purple-200"
+      >back to safety</a
+    >.
+  </h2>
+  <p class="text-center">Error 404: Not found</p>
+</MainLayout>

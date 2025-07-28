@@ -1,0 +1,32 @@
+---
+import "../styles/global.css";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>valbuilds</title>
+  </head>
+  <body
+    class="p-4 font-sans bg-white dark:bg-black text-black dark:text-white flex flex-col min-h-screen"
+  >
+    <div class="text-lg mb-auto my-auto">
+      <slot />
+    </div>
+    <footer
+      class="flex flex-wrap justify-between w-full max-w-screen-xl mx-auto"
+    >
+      <p>Made with ❤️ by Valentine. 🏳️‍⚧️</p>
+      <a href="/">
+        <p
+          class="bg-royal-purple-200 dark:bg-royal-purple-800 p-1.5 tracking-tighter text-black dark:text-white hover:bg-royal-purple-300 hover:dark:bg-royal-purple-900"
+        >
+          valbuilds
+        </p>
+      </a>
+    </footer>
+  </body>
+</html>
