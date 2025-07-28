@@ -1,14 +1,11 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
 
-import tailwind from '@astrojs/tailwind';
-
-import icon from 'astro-icon';
-
-import svelte from '@astrojs/svelte';
+import tailwindcss from '@tailwindcss/vite';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://www.valbuilds.xyz',
-  integrations: [tailwind(), icon(), svelte()]
+  vite: {
+    plugins: [tailwindcss()]
+  }
 });
