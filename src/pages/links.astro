@@ -1,5 +1,8 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
+if (Astro.redirect) {
+  return Astro.redirect("/", 301);
+}
 ---
 
 <MainLayout>
