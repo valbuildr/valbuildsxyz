@@ -25,11 +25,16 @@ import ColorModeToggle from "../components/ColorModeToggle.astro";
       <div class="flex gap-2 items-center">
         <ColorModeToggle />
         <a href="/">
-          <p
-            class="bg-royal-purple-200 dark:bg-royal-purple-800 p-1.5 tracking-tighter text-black dark:text-white hover:bg-royal-purple-300 hover:dark:bg-royal-purple-900"
-          >
-            valbuilds
-          </p>
+          <img
+            src="/8831/dark.png"
+            class="block dark:hidden"
+            alt="valbuildr - Click to go to home page"
+          />
+          <img
+            src="/8831/light.png"
+            class="dark:block hidden"
+            alt="valbuildr - Click to go to home page"
+          />
         </a>
       </div>
     </footer>
