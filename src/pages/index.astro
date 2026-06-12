@@ -1,5 +1,15 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
+import { ClipboardPen, ArrowUpRight } from "@lucide/astro";
+import {
+  Discord,
+  Youtube,
+  Bluesky,
+  Mastodon,
+  Github,
+  Tiktok,
+  Instagram,
+} from "simple-icons-astro";
 ---
 
 <head>
@@ -29,83 +39,91 @@ import MainLayout from "../layouts/MainLayout.astro";
     An asexual transfem lesbian that makes nerdy stuff online.
   </h2>
 
-  <img
-    src="https://github-readme-stats.hackclub.dev/api/wakatime?username=948&api_domain=hackatime.hackclub.com&theme=omni&custom_title=Hackatime+Stats&layout=compact&cache_seconds=0&langs_count=8"
-    class="mx-auto mb-4"
-    alt="Valentine's Hackatime stats"
-  />
+  <div class="border p-4 max-w-lg mx-auto mb-4 space-y-1">
+    <p
+      class="bg-royal-purple-800 text-white dark:bg-royal-purple-200 dark:text-black uppercase tracking-wide p-1 px-3 rounded-full font-bold w-fit text-sm"
+    >
+      <ClipboardPen class="inline-block mr-1" size={24} /> Survey
+    </p>
+    <h3 class="font-medium text-2xl">
+      Who does the country <span class="italic">actually</span> want to win the NBA
+      Finals?
+    </h3>
+    <p>
+      I keep seeing these "who the country is rooting for in the finals" maps,
+      and with so many variations it made me actually curious. What's the truth
+      here, so I created a quick little form.
+    </p>
+    <p>
+      If you have time, I'd love if you could fill it out. You'll need a Google
+      account, but this is just to prevent spam responses. Your email is not
+      shared with me.
+    </p>
+    <a
+      href="https://go.valbuilds.xyz/nba-finals-2026"
+      target="_blank"
+      class="bg-black dark:bg-white dark:text-black px-2 p-1 font-medium text-sm uppercase tracking-wide text-white cursor-pointer items-center"
+      >Fill it out on Google Forms <ArrowUpRight
+        class="inline-block ml-1"
+        size={16}
+      /></a
+    >
+  </div>
 
   <div class="flex flex-wrap gap-2 mx-auto w-fit items-center justify-center">
-    <!-- discord -->
-    <a href="https://discord.gg/UKVMvUG2h9" target="_blank">
-      <img
-        src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white"
-        alt="Discord server"
-        class="h-9 sm:h-7"
-      />
+    <a
+      href="https://discord.gg/UKVMvUG2h9"
+      target="_blank"
+      class="bg-[#5865F2] px-2 p-1 font-medium text-sm uppercase tracking-wide text-white cursor-pointer"
+    >
+      <Discord class="inline-block mr-1" size={16} /> Discord
     </a>
-    <!-- youtube -->
-    <a href="https://www.youtube.com/@valbuildr" target="_blank">
-      <img
-        src="https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white"
-        alt="Youtube channel"
-        class="h-9 sm:h-7"
-      />
+    <a
+      href="https://www.youtube.com/@valbuildr"
+      target="_blank"
+      class="bg-[#FF0000] px-2 p-1 font-medium text-sm uppercase tracking-wide text-white cursor-pointer"
+    >
+      <Youtube class="inline-block mr-1" size={16} /> YouTube
     </a>
     <!-- bluesky -->
-    <a href="https://bsky.app/valbuilds.xyz" target="_blank">
-      <img
-        src="https://img.shields.io/badge/Bluesky-0285FF?logo=bluesky&logoColor=fff&style=for-the-badge"
-        alt="Bluesky account"
-        class="h-9 sm:h-7"
-      />
+    <a
+      href="https://bsky.app/valbuilds.xyz"
+      target="_blank"
+      class="bg-[#0285FF] px-2 p-1 font-medium text-sm uppercase tracking-wide text-white cursor-pointer"
+    >
+      <Bluesky class="inline-block mr-1" size={16} /> Bluesky
     </a>
     <!-- mastodon -->
-    <a href="https://wetdry.world/@valbuildr" target="_blank">
-      <img
-        src="https://img.shields.io/badge/Mastodon-6364FF?style=for-the-badge&logo=Mastodon&logoColor=white"
-        alt="Mastodon account"
-        class="h-9 sm:h-7"
-      />
+    <a
+      href="https://wetdry.world/@valbuildr"
+      target="_blank"
+      class="bg-[#6364FF] px-2 p-1 font-medium text-sm uppercase tracking-wide text-white cursor-pointer"
+    >
+      <Mastodon class="inline-block mr-1" size={16} /> Mastodon
     </a>
     <!-- github -->
-    <a href="https://github.com/valbuildr" target="_blank">
-      <img
-        src="https://img.shields.io/badge/GitHub-000000?style=for-the-badge&logo=github&logoColor=white"
-        alt="Github account"
-        class="block dark:hidden h-9 sm:h-7"
-      />
-      <img
-        src="https://img.shields.io/badge/GitHub-FFFFFF?style=for-the-badge&logo=github&logoColor=black"
-        alt="Github account"
-        class="dark:block hidden h-9 sm:h-7"
-      />
+    <a
+      href="https://github.com/valbuildr"
+      target="_blank"
+      class="bg-black dark:bg-white dark:text-black px-2 p-1 font-medium text-sm uppercase tracking-wide text-white cursor-pointer"
+    >
+      <Github class="inline-block mr-1" size={16} /> Github
     </a>
     <!-- tiktok -->
-    <a href="https://www.tiktok.com/@valbuildr" target="_blank">
-      <img
-        src="https://img.shields.io/badge/TikTok-000000?style=for-the-badge&logo=tiktok&logoColor=white"
-        alt="Github account"
-        class="block dark:hidden h-9 sm:h-7"
-      />
-      <img
-        src="https://img.shields.io/badge/TikTok-FFFFFF?style=for-the-badge&logo=tiktok&logoColor=black"
-        alt="Github account"
-        class="dark:block hidden h-9 sm:h-7"
-      />
+    <a
+      href="https://www.tiktok.com/@valbuildr"
+      target="_blank"
+      class="bg-black dark:bg-white dark:text-black px-2 p-1 font-medium text-sm uppercase tracking-wide text-white cursor-pointer"
+    >
+      <Tiktok class="inline-block mr-1" size={16} /> TikTok
     </a>
     <!-- instagram -->
-     <a href="https://instagram.com/valbuilded" target="_blank">
-      <img
-        src="https://img.shields.io/badge/Instagram-000000?style=for-the-badge&logo=Instagram&logoColor=white"
-        alt="Instagram account"
-        class="block dark:hidden h-9 sm:h-7"
-      />
-      <img
-        src="https://img.shields.io/badge/Instagram-FFFFFF?style=for-the-badge&logo=Instagram&logoColor=black"
-        alt="Instagram account"
-        class="dark:block hidden h-9 sm:h-7"
-      />
+    <a
+      href="https://instagram.com/valbuilded"
+      target="_blank"
+      class="bg-black dark:bg-white dark:text-black px-2 p-1 font-medium text-sm uppercase tracking-wide text-white cursor-pointer"
+    >
+      <Instagram class="inline-block mr-1" size={16} /> Instagram
     </a>
   </div>
 </MainLayout>
