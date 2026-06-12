@@ -9,6 +9,8 @@ import ColorModeToggle from "../components/ColorModeToggle.astro";
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
+    <link rel="preconnect" href="https://rsms.me/" />
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
     <meta name="generator" content={Astro.generator} />
     <title>valbuilds</title>
   </head>
@@ -24,18 +26,6 @@ import ColorModeToggle from "../components/ColorModeToggle.astro";
       <p class="text-center mb-2 sm:mb-0">Made with ❤️ by Valentine. 🏳️‍⚧️</p>
       <div class="flex gap-2 items-center">
         <ColorModeToggle />
-        <a href="/">
-          <img
-            src="/8831/dark.png"
-            class="block dark:hidden"
-            alt="valbuildr - Click to go to home page"
-          />
-          <img
-            src="/8831/light.png"
-            class="dark:block hidden"
-            alt="valbuildr - Click to go to home page"
-          />
-        </a>
       </div>
     </footer>
   </body>
